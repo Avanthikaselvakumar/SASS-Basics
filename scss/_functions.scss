@@ -1,0 +1,4 @@
+// _functions.scss
+@function rounded-down($number) {
+    @return floor($number);
+}

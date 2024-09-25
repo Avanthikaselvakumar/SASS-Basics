@@ -1,0 +1,49 @@
+// _base.scss
+body {
+    font-family: Arial, sans-serif;
+    background-color: $bg-color;
+    color: $text-color;
+    margin: 0;
+    header {
+        text-align: center;
+        padding: 20px;
+        background: $primary-color;
+        color: white;
+        &:hover {
+            color: $heading-color;
+        }
+    }
+    main {
+        padding: 20px;
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: $gap;
+            a {
+                text-decoration: none;
+                .gallery-item {
+                    @include fixed-image-size($image-width, $image-height); // Use mixin with parameters
+                    cursor: pointer;
+                    transition: transform 0.2s;
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+        // Lightbox styles
+        .lightbox {
+            display: none; // Hidden by default
+            @include lightbox-style;
+            img {
+                @include fixed-image-size($lightbox-width, $lightbox-height); // Use mixin with parameters
+            }
+            &.lightbox:target {
+                display: flex; // Show lightbox when target matches
+            }
+            .close {
+                @extend %lightbox-close; // Use extend for shared styles
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+// _loops.scss
+@for $i from 1 through 8 {
+    .lightbox#img#{$i} {
+        background: lightgrey; // Example styling
+    }
+}

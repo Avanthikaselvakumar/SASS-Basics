@@ -1,3 +1,47 @@
+body main .lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+}
+body main .lightbox .close:hover {
+  color: #ff5e5e;
+}
+
+.lightbox#img1 {
+  background: lightgrey;
+}
+
+.lightbox#img2 {
+  background: lightgrey;
+}
+
+.lightbox#img3 {
+  background: lightgrey;
+}
+
+.lightbox#img4 {
+  background: lightgrey;
+}
+
+.lightbox#img5 {
+  background: lightgrey;
+}
+
+.lightbox#img6 {
+  background: lightgrey;
+}
+
+.lightbox#img7 {
+  background: lightgrey;
+}
+
+.lightbox#img8 {
+  background: lightgrey;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
@@ -30,6 +74,8 @@ body main .gallery a .gallery-item {
   object-fit: cover;
   object-position: center;
   display: block;
+  max-width: 100%;
+  max-height: 100%;
   cursor: pointer;
   transition: transform 0.2s;
 }
@@ -38,7 +84,6 @@ body main .gallery a .gallery-item:hover {
 }
 body main .lightbox {
   display: none;
-  /* Hidden by default */
   position: fixed;
   z-index: 999;
   left: 0;
@@ -55,22 +100,11 @@ body main .lightbox img {
   object-fit: cover;
   object-position: center;
   display: block;
+  max-width: 100%;
+  max-height: 100%;
 }
 body main .lightbox.lightbox:target {
   display: flex;
-  /* Show lightbox when target matches */
-}
-body main .lightbox .close {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-  color: white;
-  font-size: 40px;
-  text-decoration: none;
-}
-body main .lightbox .close:hover {
-  color: #ff5e5e;
-  /* Change color on hover */
 }
 
 /*# sourceMappingURL=style.css.map */

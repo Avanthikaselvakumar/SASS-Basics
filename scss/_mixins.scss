@@ -1,0 +1,23 @@
+// _mixins.scss
+@mixin lightbox-style {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $lightbox-bg;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin fixed-image-size($width, $height) {
+    width: $width;
+    height: $height;
+    object-fit: cover; // Ensures the image fills the box while maintaining aspect ratio
+    object-position: center;
+    display: block;
+    // Responsive adjustments
+    max-width: 100%; // Allow the image to shrink
+    max-height: 100%; // Allow the image to shrink
+}

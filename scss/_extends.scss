@@ -1,0 +1,12 @@
+// _extends.scss
+%lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+    &:hover {
+        color: #ff5e5e; // Change color on hover
+    }
+}
